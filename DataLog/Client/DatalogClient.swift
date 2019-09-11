@@ -140,7 +140,7 @@ public class DatalogClient {
      Flush the current batch and persisting the messages to Datalog. Useful for manually pushing message before a crash or when certain
      criteria is met, such as backgrounding the application.
      */
-    @objc public func flush() {
+    public func flush() {
         var logs = [DatalogMessage]()
         
         accessQueue.sync { [unowned self] in
