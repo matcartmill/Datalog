@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8207755123293FB1009871EE"
-               BuildableName = "DataLog.framework"
-               BlueprintName = "DataLog"
-               ReferencedContainer = "container:DataLog.xcodeproj">
+               BuildableName = "Datalog.framework"
+               BlueprintName = "Datalog"
+               ReferencedContainer = "container:Datalog.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8207755A23293FB2009871EE"
-               BuildableName = "DataLogTests.xctest"
-               BlueprintName = "DataLogTests"
-               ReferencedContainer = "container:DataLog.xcodeproj">
+               BuildableName = "DatalogTests.xctest"
+               BlueprintName = "DatalogTests"
+               ReferencedContainer = "container:Datalog.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8207755123293FB1009871EE"
-            BuildableName = "DataLog.framework"
-            BlueprintName = "DataLog"
-            ReferencedContainer = "container:DataLog.xcodeproj">
+            BuildableName = "Datalog.framework"
+            BlueprintName = "Datalog"
+            ReferencedContainer = "container:Datalog.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8207755123293FB1009871EE"
-            BuildableName = "DataLog.framework"
-            BlueprintName = "DataLog"
-            ReferencedContainer = "container:DataLog.xcodeproj">
+            BuildableName = "Datalog.framework"
+            BlueprintName = "Datalog"
+            ReferencedContainer = "container:Datalog.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +83,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8207755123293FB1009871EE"
-            BuildableName = "DataLog.framework"
-            BlueprintName = "DataLog"
-            ReferencedContainer = "container:DataLog.xcodeproj">
+            BuildableName = "Datalog.framework"
+            BlueprintName = "Datalog"
+            ReferencedContainer = "container:Datalog.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

@@ -1,18 +1,18 @@
 import Foundation
 
 /// Logging client used to persist logs
-public class DataLogClient {
+public class DatalogClient {
     
     // MARK: - Private Properties
     
     /// The queue that handles property access
-    private let accessQueue = DispatchQueue(label: "DataLogAccessQueue", qos: .background, attributes: .concurrent, target: .global())
+    private let accessQueue = DispatchQueue(label: "DatalogAccessQueue", qos: .background, attributes: .concurrent, target: .global())
     
-    /// The current batch of DataLogMessages
-    private var batch: [DataLogMessage] = []
+    /// The current batch of DatalogMessages
+    private var batch: [DatalogMessage] = []
     
     /// The configuration used for the client
-    private let configuration: DataLogConfiguration
+    private let configuration: DatalogConfiguration
     
     /// The FileManager used to store the failed requests
     private let fileManager: FileManager
@@ -22,7 +22,7 @@ public class DataLogClient {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let documentsDirectoryPath = paths[0]
         let documentsDirectoryUrl = URL(string: documentsDirectoryPath)!
-        return documentsDirectoryUrl.appendingPathComponent("DataLog", isDirectory: true).absoluteString
+        return documentsDirectoryUrl.appendingPathComponent("datalog", isDirectory: true).absoluteString
     }
     
     /// The URL Session to use for the request
@@ -37,17 +37,17 @@ public class DataLogClient {
         guard let files = filePaths else { return }
         
         files.forEach { file in
-            print("DataLog: Found file for failed log submissions. File: \(file)")
+            print("Datalog: Found file for failed log submissions. File: \(file)")
             
             let url = URL(fileURLWithPath: storagePath + file)
-            let logs = try! JSONDecoder().decode([DataLogMessage].self, from: Data(contentsOf: url))
+            let logs = try! JSONDecoder().decode([DatalogMessage].self, from: Data(contentsOf: url))
             try! fileManager.removeItem(atPath: "\(storagePath)\(file)")
             send(logs)
         }
     }
     
-    /// Persist the logs in DataLog
-    private func send(_ logs: [DataLogMessage]) {
+    /// Persist the logs in Datadog
+    private func send(_ logs: [DatalogMessage]) {
         guard !logs.isEmpty else { return }
         
         let data = try! JSONEncoder().encode(logs)
@@ -55,8 +55,8 @@ public class DataLogClient {
         let networkProtocol = self.configuration.networkProtocol.rawValue
         
         var urlComponents = self.configuration.hostLocation == .us ?
-            URLComponents(string: "\(networkProtocol)://http-intake.logs.DataLoghq.com")! :
-            URLComponents(string: "\(networkProtocol)://http-intake.logs.DataLoghq.eu")!
+            URLComponents(string: "\(networkProtocol)://http-intake.logs.datadoghq.com")! :
+            URLComponents(string: "\(networkProtocol)://http-intake.logs.datadoghq.eu")!
         
         urlComponents.path = "/v1/input/\(configuration.apiKey)"
         
@@ -76,7 +76,7 @@ public class DataLogClient {
         let dataTask = self.urlSession.dataTask(with: urlRequest) { [weak self] (_, _, error) in
             if let error = error {
                 self?.store(data)
-                print("Error while persisting logs to DataLog. Logs will be stored and attempted to be persisted again at a later time. Message: \(error.localizedDescription)")
+                print("Error while persisting logs to Datadog. Logs will be stored and attempted to be persisted again at a later time. Message: \(error.localizedDescription)")
             }
         }
         dataTask.resume()
@@ -97,12 +97,12 @@ public class DataLogClient {
     // MARK: - Public Initializer
     
     /**
-     Initializes the DataLogClient with a DataLogConfiguration.
+     Initializes the DatalogClient with a DatalogConfiguration.
      
-     - Parameter _: The DataLogConfiguration.
+     - Parameter _: The DatalogConfiguration.
      - Parameter urlSession: The URL Session to use for the request. Default: URLSession with .default Configuration
      */
-    public init(_ configuration: DataLogConfiguration,
+    public init(_ configuration: DatalogConfiguration,
                 fileManager: FileManager = .default,
                 urlSession: URLSession = .init(configuration: .default)) {
         
@@ -116,13 +116,13 @@ public class DataLogClient {
     // MARK: - Public Methods
     
     /**
-     Adds a DataLogMessage to the batch for submission.
+     Adds a DatalogMessage to the batch for submission.
      
-     - Parameter _: The DataLogMessage to add to persistence.
+     - Parameter _: The DatalogMessage to add to persistence.
      - Parameter forceUpdate: Whether persisting this message should be immediate and persist the entire active batch. Default: false
      */
-    public func log(_ message: DataLogMessage, forceUpdate: Bool = false) {
-        // The logic of this quard is a bit on the odd-side, however due to how DataLog handles integer-based log levels,
+    public func log(_ message: DatalogMessage, forceUpdate: Bool = false) {
+        // The logic of this quard is a bit on the odd-side, however due to how Datadog handles integer-based log levels,
         // 0 is a higher priority log than 7.
         guard message.level.rawValue <= configuration.minimumLogLevel.rawValue else { return }
         
@@ -137,11 +137,11 @@ public class DataLogClient {
     }
     
     /**
-     Flush the current batch and persisting the messages to DataLog. Useful for manually pushing message before a crash or when certain
+     Flush the current batch and persisting the messages to Datalog. Useful for manually pushing message before a crash or when certain
      criteria is met, such as backgrounding the application.
      */
     @objc public func flush() {
-        var logs = [DataLogMessage]()
+        var logs = [DatalogMessage]()
         
         accessQueue.sync { [unowned self] in
             logs = self.batch

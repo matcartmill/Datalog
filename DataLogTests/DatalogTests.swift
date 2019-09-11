@@ -1,24 +1,24 @@
 import XCTest
-@testable import DataLog
+@testable import Datalog
 
-class DataLogConfigurationTests: XCTestCase {
+class DatalogConfigurationTests: XCTestCase {
     func test_failsToCreateIfAPIKeyIsEmpty() {
-        let configuration = try? DataLogConfiguration("")
+        let configuration = try? DatalogConfiguration("")
         XCTAssertNil(configuration)
     }
     
     func test_failsToCreateIfRequestedBatchSizeIsHigherThanTheMaximumAllowed() {
-        let configuration = try? DataLogConfiguration("foo", maximumBatchCount: DataLogConfiguration.maximumBatchCountSupported + 1)
+        let configuration = try? DatalogConfiguration("foo", maximumBatchCount: DatalogConfiguration.maximumBatchCountSupported + 1)
         XCTAssertNil(configuration)
     }
 }
 
-class DataLogClientTests: XCTestCase {
+class DatalogClientTests: XCTestCase {
     func test_batchesMessagesUntilConfiguredThresholdIsMet() {
         let urlSession = FakeURLSession()
         
-        let configuration = try! DataLogConfiguration("foo", maximumBatchCount: 3)
-        let client = DataLogClient(configuration, urlSession: urlSession)
+        let configuration = try! DatalogConfiguration("foo", maximumBatchCount: 3)
+        let client = DatalogClient(configuration, urlSession: urlSession)
         
         client.log(.init(timestamp: Date().timeIntervalSinceNow, level: .notice, message: "Test 1", metadata: nil))
         XCTAssertFalse(urlSession.taskCreated)
@@ -33,8 +33,8 @@ class DataLogClientTests: XCTestCase {
     func test_flushSendsLogsBeforeThresholdIsMet() {
         let urlSession = FakeURLSession()
         
-        let configuration = try! DataLogConfiguration("foo", maximumBatchCount: 5)
-        let client = DataLogClient(configuration, urlSession: urlSession)
+        let configuration = try! DatalogConfiguration("foo", maximumBatchCount: 5)
+        let client = DatalogClient(configuration, urlSession: urlSession)
         
         client.log(.init(timestamp: Date().timeIntervalSinceNow, level: .notice, message: "Test 1", metadata: nil))
         XCTAssertFalse(urlSession.taskCreated)
@@ -47,8 +47,8 @@ class DataLogClientTests: XCTestCase {
         let fileManager = FakeFileManager()
         let urlSession = FakeURLSession(shouldSucceed: false)
         
-        let configuration = try! DataLogConfiguration("foo", maximumBatchCount: 1)
-        let client = DataLogClient(configuration, fileManager: fileManager, urlSession: urlSession)
+        let configuration = try! DatalogConfiguration("foo", maximumBatchCount: 1)
+        let client = DatalogClient(configuration, fileManager: fileManager, urlSession: urlSession)
         
         XCTAssertFalse(fileManager.createDirectoryCalled)
         XCTAssertFalse(fileManager.createFileCalled)

@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8207755C23293FB2009871EE /* DataLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8207755223293FB1009871EE /* DataLog.framework */; };
-		8207756123293FB2009871EE /* DataLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8207756023293FB2009871EE /* DataLogTests.swift */; };
-		8207756323293FB2009871EE /* DataLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 8207755523293FB1009871EE /* DataLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8207756E2329475E009871EE /* DataLogClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8207756D2329475E009871EE /* DataLogClient.swift */; };
-		82077571232947C5009871EE /* DataLogConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82077570232947C5009871EE /* DataLogConfiguration.swift */; };
-		82077574232947EB009871EE /* DataLogMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82077573232947EB009871EE /* DataLogMessage.swift */; };
-		8207757723294839009871EE /* DataLogConfigurationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8207757623294839009871EE /* DataLogConfigurationOptions.swift */; };
+		8207755C23293FB2009871EE /* Datalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8207755223293FB1009871EE /* Datalog.framework */; };
+		8207756123293FB2009871EE /* DatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8207756023293FB2009871EE /* DatalogTests.swift */; };
+		8207756323293FB2009871EE /* Datalog.h in Headers */ = {isa = PBXBuildFile; fileRef = 8207755523293FB1009871EE /* Datalog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8207756E2329475E009871EE /* DatalogClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8207756D2329475E009871EE /* DatalogClient.swift */; };
+		82077571232947C5009871EE /* DatalogConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82077570232947C5009871EE /* DatalogConfiguration.swift */; };
+		82077574232947EB009871EE /* DatalogMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82077573232947EB009871EE /* DatalogMessage.swift */; };
+		8207757723294839009871EE /* DatalogConfigurationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8207757623294839009871EE /* DatalogConfigurationOptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,16 +27,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8207755223293FB1009871EE /* DataLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8207755523293FB1009871EE /* DataLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataLog.h; sourceTree = "<group>"; };
+		8207755223293FB1009871EE /* Datalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Datalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8207755523293FB1009871EE /* Datalog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Datalog.h; sourceTree = "<group>"; };
 		8207755623293FB1009871EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8207755B23293FB2009871EE /* DataLogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataLogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8207756023293FB2009871EE /* DataLogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLogTests.swift; sourceTree = "<group>"; };
+		8207755B23293FB2009871EE /* DatalogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DatalogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8207756023293FB2009871EE /* DatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatalogTests.swift; sourceTree = "<group>"; };
 		8207756223293FB2009871EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8207756D2329475E009871EE /* DataLogClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLogClient.swift; sourceTree = "<group>"; };
-		82077570232947C5009871EE /* DataLogConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLogConfiguration.swift; sourceTree = "<group>"; };
-		82077573232947EB009871EE /* DataLogMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLogMessage.swift; sourceTree = "<group>"; };
-		8207757623294839009871EE /* DataLogConfigurationOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLogConfigurationOptions.swift; sourceTree = "<group>"; };
+		8207756D2329475E009871EE /* DatalogClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatalogClient.swift; sourceTree = "<group>"; };
+		82077570232947C5009871EE /* DatalogConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatalogConfiguration.swift; sourceTree = "<group>"; };
+		82077573232947EB009871EE /* DatalogMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatalogMessage.swift; sourceTree = "<group>"; };
+		8207757623294839009871EE /* DatalogConfigurationOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatalogConfigurationOptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8207755C23293FB2009871EE /* DataLog.framework in Frameworks */,
+				8207755C23293FB2009871EE /* Datalog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,8 +70,8 @@
 		8207755323293FB1009871EE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8207755223293FB1009871EE /* DataLog.framework */,
-				8207755B23293FB2009871EE /* DataLogTests.xctest */,
+				8207755223293FB1009871EE /* Datalog.framework */,
+				8207755B23293FB2009871EE /* DatalogTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,7 +82,7 @@
 				8207756C2329473E009871EE /* Client */,
 				8207756F232947B9009871EE /* Configuration */,
 				82077572232947D8009871EE /* Models */,
-				8207755523293FB1009871EE /* DataLog.h */,
+				8207755523293FB1009871EE /* Datalog.h */,
 				8207755623293FB1009871EE /* Info.plist */,
 			);
 			path = DataLog;
@@ -91,7 +91,7 @@
 		8207755F23293FB2009871EE /* DataLogTests */ = {
 			isa = PBXGroup;
 			children = (
-				8207756023293FB2009871EE /* DataLogTests.swift */,
+				8207756023293FB2009871EE /* DatalogTests.swift */,
 				8207756223293FB2009871EE /* Info.plist */,
 			);
 			path = DataLogTests;
@@ -100,7 +100,7 @@
 		8207756C2329473E009871EE /* Client */ = {
 			isa = PBXGroup;
 			children = (
-				8207756D2329475E009871EE /* DataLogClient.swift */,
+				8207756D2329475E009871EE /* DatalogClient.swift */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -108,8 +108,8 @@
 		8207756F232947B9009871EE /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				82077570232947C5009871EE /* DataLogConfiguration.swift */,
-				8207757623294839009871EE /* DataLogConfigurationOptions.swift */,
+				82077570232947C5009871EE /* DatalogConfiguration.swift */,
+				8207757623294839009871EE /* DatalogConfigurationOptions.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -117,7 +117,7 @@
 		82077572232947D8009871EE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				82077573232947EB009871EE /* DataLogMessage.swift */,
+				82077573232947EB009871EE /* DatalogMessage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -129,16 +129,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8207756323293FB2009871EE /* DataLog.h in Headers */,
+				8207756323293FB2009871EE /* Datalog.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8207755123293FB1009871EE /* DataLog */ = {
+		8207755123293FB1009871EE /* Datalog */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8207756623293FB2009871EE /* Build configuration list for PBXNativeTarget "DataLog" */;
+			buildConfigurationList = 8207756623293FB2009871EE /* Build configuration list for PBXNativeTarget "Datalog" */;
 			buildPhases = (
 				8207754D23293FB1009871EE /* Headers */,
 				8207754E23293FB1009871EE /* Sources */,
@@ -149,14 +149,14 @@
 			);
 			dependencies = (
 			);
-			name = DataLog;
+			name = Datalog;
 			productName = DataLog;
-			productReference = 8207755223293FB1009871EE /* DataLog.framework */;
+			productReference = 8207755223293FB1009871EE /* Datalog.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8207755A23293FB2009871EE /* DataLogTests */ = {
+		8207755A23293FB2009871EE /* DatalogTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8207756923293FB2009871EE /* Build configuration list for PBXNativeTarget "DataLogTests" */;
+			buildConfigurationList = 8207756923293FB2009871EE /* Build configuration list for PBXNativeTarget "DatalogTests" */;
 			buildPhases = (
 				8207755723293FB2009871EE /* Sources */,
 				8207755823293FB2009871EE /* Frameworks */,
@@ -167,9 +167,9 @@
 			dependencies = (
 				8207755E23293FB2009871EE /* PBXTargetDependency */,
 			);
-			name = DataLogTests;
+			name = DatalogTests;
 			productName = DataLogTests;
-			productReference = 8207755B23293FB2009871EE /* DataLogTests.xctest */;
+			productReference = 8207755B23293FB2009871EE /* DatalogTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -190,7 +190,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8207754C23293FB1009871EE /* Build configuration list for PBXProject "DataLog" */;
+			buildConfigurationList = 8207754C23293FB1009871EE /* Build configuration list for PBXProject "Datalog" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -202,8 +202,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8207755123293FB1009871EE /* DataLog */,
-				8207755A23293FB2009871EE /* DataLogTests */,
+				8207755123293FB1009871EE /* Datalog */,
+				8207755A23293FB2009871EE /* DatalogTests */,
 			);
 		};
 /* End PBXProject section */
@@ -230,10 +230,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8207757723294839009871EE /* DataLogConfigurationOptions.swift in Sources */,
-				8207756E2329475E009871EE /* DataLogClient.swift in Sources */,
-				82077574232947EB009871EE /* DataLogMessage.swift in Sources */,
-				82077571232947C5009871EE /* DataLogConfiguration.swift in Sources */,
+				8207757723294839009871EE /* DatalogConfigurationOptions.swift in Sources */,
+				8207756E2329475E009871EE /* DatalogClient.swift in Sources */,
+				82077574232947EB009871EE /* DatalogMessage.swift in Sources */,
+				82077571232947C5009871EE /* DatalogConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8207756123293FB2009871EE /* DataLogTests.swift in Sources */,
+				8207756123293FB2009871EE /* DatalogTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +250,7 @@
 /* Begin PBXTargetDependency section */
 		8207755E23293FB2009871EE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8207755123293FB1009871EE /* DataLog */;
+			target = 8207755123293FB1009871EE /* Datalog */;
 			targetProxy = 8207755D23293FB2009871EE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -472,7 +472,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8207754C23293FB1009871EE /* Build configuration list for PBXProject "DataLog" */ = {
+		8207754C23293FB1009871EE /* Build configuration list for PBXProject "Datalog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8207756423293FB2009871EE /* Debug */,
@@ -481,7 +481,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8207756623293FB2009871EE /* Build configuration list for PBXNativeTarget "DataLog" */ = {
+		8207756623293FB2009871EE /* Build configuration list for PBXNativeTarget "Datalog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8207756723293FB2009871EE /* Debug */,
@@ -490,7 +490,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8207756923293FB2009871EE /* Build configuration list for PBXNativeTarget "DataLogTests" */ = {
+		8207756923293FB2009871EE /* Build configuration list for PBXNativeTarget "DatalogTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8207756A23293FB2009871EE /* Debug */,

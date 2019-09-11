@@ -1,16 +1,16 @@
-/// DataLog HTTP Protocol
-public enum DataLogNetworkProtocol: String {
+/// Datadog HTTP Protocol
+public enum NetworkProtocol: String {
     case http
     case https
 }
 
-/// DataLog Host Location
-public enum DataLogHostLocation {
+/// Datadog Host Location
+public enum HostLocation {
     case eu, us // swiftlint:disable:this identifier_name
 }
 
 /// Log Level
-public enum DataLogLogLevel: Int, Codable {
+public enum LogLevel: Int, Codable {
     case emergency = 0
     case alert = 1
     case critical = 2
