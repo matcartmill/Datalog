@@ -24,7 +24,7 @@ servers.
 
 The initialization of the `DatalogConfiguration` is failable, in that it will `throw` under two specific conditions:
 
-- The `apiKey `property you're attempting to set is an empty string
+- The `apiKey` property you're attempting to set is an empty string
 - The `maximumBatchCount` specified is greater than the current maximum allowed.
 
 Both of these scenarios will result in either a `DatalogConfiguration.Error.apiKeyEmpty` error or a `DatalogConfiguration.Error.batchCountNotSupported` error.
