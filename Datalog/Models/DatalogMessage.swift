@@ -16,4 +16,11 @@ public struct DatalogMessage: Codable {
         case timestamp, message, metadata
         case level = "status"
     }
+    
+    public init(message: String, level: LogLevel, timestamp: TimeInterval, metadata: [String: String]? = nil) {
+        self.message = message
+        self.level = level
+        self.timestamp = timestamp
+        self.metadata = metadata
+    }
 }
