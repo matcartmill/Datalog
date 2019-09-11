@@ -30,8 +30,8 @@ public class DataLogClient {
     
     // MARK: - Private Methods
     
-    /// Check for failed logs
-    private func persistFailedLogReports() {
+    /// Check for failed logs and attempt to send them to datadog
+    private func attemptToRecoverFailedLogReports() {
         let filePaths = try? fileManager.contentsOfDirectory(atPath: storagePath)
         
         guard let files = filePaths else { return }
@@ -110,7 +110,7 @@ public class DataLogClient {
         self.fileManager = fileManager
         self.urlSession = urlSession
         
-        persistFailedLogReports()
+        attemptToRecoverFailedLogReports()
     }
     
     // MARK: - Public Methods

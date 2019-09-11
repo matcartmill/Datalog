@@ -35,7 +35,7 @@
 		8207756223293FB2009871EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8207756D2329475E009871EE /* DataLogClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLogClient.swift; sourceTree = "<group>"; };
 		82077570232947C5009871EE /* DataLogConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLogConfiguration.swift; sourceTree = "<group>"; };
-		82077573232947EB009871EE /* DataLogMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataLogMessage.swift; path = DataLog/DataLogMessage.swift; sourceTree = SOURCE_ROOT; };
+		82077573232947EB009871EE /* DataLogMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLogMessage.swift; sourceTree = "<group>"; };
 		8207757623294839009871EE /* DataLogConfigurationOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLogConfigurationOptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
