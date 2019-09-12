@@ -20,13 +20,13 @@ class DatalogClientTests: XCTestCase {
         let configuration = try! DatalogConfiguration("foo", maximumBatchCount: 3)
         let client = DatalogClient(configuration, urlSession: urlSession)
         
-        client.log(.init(timestamp: Date().timeIntervalSinceNow, level: .notice, message: "Test 1", metadata: nil))
+        client.log(.init(message: "Test 1", level: .notice, timestamp: Date().timeIntervalSinceNow, metadata: nil))
         XCTAssertFalse(urlSession.taskCreated)
         
-        client.log(.init(timestamp: Date().timeIntervalSinceNow, level: .notice, message: "Test 2", metadata: nil))
+        client.log(.init(message: "Test 2", level: .notice, timestamp: Date().timeIntervalSinceNow, metadata: nil))
         XCTAssertFalse(urlSession.taskCreated)
         
-        client.log(.init(timestamp: Date().timeIntervalSinceNow, level: .notice, message: "Test 3", metadata: nil))
+        client.log(.init(message: "Test 3", level: .notice, timestamp: Date().timeIntervalSinceNow, metadata: nil))
         XCTAssertTrue(urlSession.taskCreated)
     }
     
@@ -36,7 +36,7 @@ class DatalogClientTests: XCTestCase {
         let configuration = try! DatalogConfiguration("foo", maximumBatchCount: 5)
         let client = DatalogClient(configuration, urlSession: urlSession)
         
-        client.log(.init(timestamp: Date().timeIntervalSinceNow, level: .notice, message: "Test 1", metadata: nil))
+        client.log(.init(message: "Test 1", level: .notice, timestamp: Date().timeIntervalSinceNow, metadata: nil))
         XCTAssertFalse(urlSession.taskCreated)
         
         client.flush()
@@ -53,7 +53,7 @@ class DatalogClientTests: XCTestCase {
         XCTAssertFalse(fileManager.createDirectoryCalled)
         XCTAssertFalse(fileManager.createFileCalled)
         
-        client.log(.init(timestamp: Date().timeIntervalSinceNow, level: .notice, message: "Test 1", metadata: nil))
+        client.log(.init(message: "Test 1", level: .notice, timestamp: Date().timeIntervalSinceNow, metadata: nil))
         
         XCTAssertTrue(fileManager.createDirectoryCalled)
         XCTAssertTrue(fileManager.createFileCalled)
