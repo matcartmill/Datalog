@@ -1,6 +1,6 @@
 # DataLog
 
-![Cocoapods](https://img.shields.io/cocoapods/v/Datalog) [![Build Status](https://app.bitrise.io/app/e9bbc870a31e5de5/status.svg?token=55YSJs3op5eBscvGq2Avrg&branch=master)](https://app.bitrise.io/app/e9bbc870a31e5de5)
+![Cocoapods](https://img.shields.io/cocoapods/v/Datalog) [![Build Status](https://app.bitrise.io/app/e9bbc870a31e5de5/status.svg?token=55YSJs3op5eBscvGq2Avrg&branch=master)](https://app.bitrise.io/app/e9bbc870a31e5de5) [![codecov](https://codecov.io/gh/matcartmill/Datalog/branch/master/graph/badge.svg)](https://codecov.io/gh/matcartmill/Datalog)
 
 A modern, light-weight, and Swift 5.0 framework for logging with Datadog.
 
