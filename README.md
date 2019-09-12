@@ -1,4 +1,7 @@
 # DataLog
+
+![Cocoapods](https://img.shields.io/cocoapods/v/Datalog) [![Build Status](https://app.bitrise.io/app/e9bbc870a31e5de5/status.svg?token=55YSJs3op5eBscvGq2Avrg&branch=master)](https://app.bitrise.io/app/e9bbc870a31e5de5)
+
 A modern, light-weight, and Swift 5.0 framework for logging with Datadog.
 
 ## Installation
