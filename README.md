@@ -53,7 +53,13 @@ let config = try! DatalogConfiguration("my-api-key", maximumBatchCount: 25, sour
 
 ### `DatalogClient`
 
-The `DatalogClient` has a single initializer that takes a single parameter: a `DatalogConfiguration`.
+The `DatalogClient` takes three (3) properties, with only one (1) property being required.
+
+The properties, in order, are:
+
+- `configuration`: **required** The `DatalogConfiguration` for your Datadog environment
+- `fileManager`: A `FileManger` instance that will allow you to store failed logs on the device for future retrieval. Default: `.default`
+- `urlSession`: A `URLSession` instance. Useful if you would like to pass a pre-configured `URLSession` for use with the Datalog client. Default: `.init(configuration: .default)`.
 
 Additionally, the client only has two public methods: `log` and `flush`.
 
