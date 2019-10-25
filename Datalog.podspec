@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   spec.name = 'Datalog'
-  spec.version = '0.2.0'
+  spec.version = '0.3.0'
   spec.homepage = 'https://github.com/MatCartmill/Datalog'
   spec.summary = 'An open-source iOS framework for HTTP(S) logging with Datadog. Written in Swift.'
   spec.description = <<-DESC
