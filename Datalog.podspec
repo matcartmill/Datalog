@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   spec.name = 'Datalog'
-  spec.version = '0.4.0'
+  spec.version = '0.5.0'
   spec.homepage = 'https://github.com/MatCartmill/Datalog'
   spec.summary = 'An open-source iOS framework for HTTP(S) logging with Datadog. Written in Swift.'
   spec.description = <<-DESC
@@ -33,13 +33,8 @@ Pod::Spec.new do |spec|
 
   spec.source_files = 'Datalog/**/*.swift'
 
-  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-
-  spec.framework = 'XCTest'
-
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   spec.requires_arc = true
-  spec.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO' }
 
 end
