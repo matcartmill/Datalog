@@ -40,5 +40,6 @@ Pod::Spec.new do |spec|
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   spec.requires_arc = true
+  spec.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO' }
 
 end
